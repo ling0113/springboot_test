@@ -1,0 +1,26 @@
+server:
+  port: 19001
+
+spring:
+  redis:
+    host: 115.28.138.45
+    password: redispassword
+    port: 6379
+    #\u64CD\u4F5C\u7B2C\u51E0\u4E2A\u5E93
+    database: 0
+
+    jedis:
+      pool:
+        #\u6700\u5927\u8FDE\u63A5\u6570
+        max-active: 10
+        #\u7B49\u5F85\u65F6\u95F4
+        max-wait: 6000ms
+        #\u6700\u5927\u7A7A\u95F2
+        max-idle: 8
+        #\u521D\u59CB\u5316\u6700\u5C0F
+        min-idle: 5
+
+
+mybatis:
+  mapper-locations: classpath:mybatis-mappers/*Dao.xml
+  type-aliases-package: com.springboot_test.entity
