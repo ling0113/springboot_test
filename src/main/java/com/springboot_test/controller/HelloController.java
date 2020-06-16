@@ -14,16 +14,45 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/a")
-    public String a() {
-        return "hello bbbbbbbbbbbbbb";
-    }
-
+    /**
+     * 测试mybatis
+     * @return
+     */
     @GetMapping("/aa")
     public List<User>  aaa() {
         List<User> list = userService.selAll();
         return list;
     }
+
+    /**
+     * 测试事务
+     * @return
+     */
+    @GetMapping("/a")
+    public void  a() {
+        try {
+            userService.TransactionalTest();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
+    }
+
+    /**
+     * 测试分布式锁
+     * @return
+     */
+    @GetMapping("/redis")
+    public void  redis() {
+        try {
+            userService.redis();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e);
+        }
+    }
+
+
 
 
 

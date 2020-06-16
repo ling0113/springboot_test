@@ -3,6 +3,7 @@ package com.springboot_test.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.*;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -28,4 +29,8 @@ public class User implements Serializable {
     @ApiModelProperty(value="userPassword")
     private String userPassword;
 
-    }
+    @Column(name = "`create_time`")
+    @ApiModelProperty(value="createTime 创建时间")
+    private Date createTime;
+
+}
