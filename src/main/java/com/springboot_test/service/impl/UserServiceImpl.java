@@ -1,11 +1,14 @@
 package com.springboot_test.service.impl;
 
+import com.springboot_test.config.GlobalException;
 import com.springboot_test.dao.UserDao;
 import com.springboot_test.entity.User;
 
 import com.springboot_test.service.UserService;
+import com.springboot_test.util.SnowflakeUtil;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import lombok.extern.slf4j.Slf4j;
@@ -43,24 +46,38 @@ public class UserServiceImpl implements UserService {
      * 测试事务
      */
     @Override
-    public void TransactionalTest() throws Exception {
+    public String TransactionalTest() {
         String Str1 = UUID.randomUUID().toString().replace("-", "");
         int j = Str1.hashCode();
         String orderId = "aaaa";
         String s = UUID.randomUUID().toString();
-        redisTemplate.opsForValue().setIfAbsent(orderId, s);
+
+        //redisTemplate.opsForValue().setIfAbsent(orderId, s);
         User user = new User();
-        user.setId(j);
-        user.setUserName("事务1");
-        user.setUserPhone("123456");
-        user.setUserPassword("123456");
+        user.setId(SnowflakeUtil.getSnowflakeId());
+        user.setUserName("事务9999");
+        user.setUserPhone("8888");
+        user.setUserPassword("99999");
         user.setCreateTime(new Date());
 
         int i = userDao.insertSelective(user);
-        System.out.println(i);
-        int a = 1 / 0;
-        System.out.println(i);
+            a();
+        return orderId;
+        //throw new GlobalException("100", "事务回滚");
 
+    }
+    @Transactional
+    public void a() {
+
+        User user = new User();
+        user.setId(SnowflakeUtil.getSnowflakeId());
+        user.setUserName("事务9999");
+        user.setUserPhone("8888");
+        user.setUserPassword("99999");
+        user.setCreateTime(new Date());
+
+        int i = userDao.insertSelective(user);
+        int m = 1/0;
     }
 
     /**
@@ -71,7 +88,7 @@ public class UserServiceImpl implements UserService {
      * 当查询不到信息显示系统繁忙重新发起请求.
      */
     @Override
-    public synchronized void redis() {
+    public  void redis() {
         //订单id  前端所传参数
         String orderId = "54164613154631546";
         //每个线程的唯一id

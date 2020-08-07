@@ -15,7 +15,7 @@ public class User implements Serializable {
     @Id
     @Column(name = "`id`")
     @ApiModelProperty(value="id")
-    private Integer id;
+    private String id;
 
     @Column(name = "`user_name`")
     @ApiModelProperty(value="userName")

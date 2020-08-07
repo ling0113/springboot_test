@@ -14,6 +14,10 @@ spring:
         max-wait: 6000ms
         max-idle: 8
         min-idle: 5
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -27,3 +31,10 @@ mybatis:
 logging:
   level:
     com.springboot_test.dao: debug
+oss:
+  endpoint: oss-cn-beijing.aliyuncs.com
+  accessKeyId: LTAIi4DV4Aso36u1
+  accessKeySecret: JEdNVS4MnEi0ayllmnWxqP9Dw7tx7F
+  bucketName: lingoss0730
+  domain: https://sycexe-keda-test.oss-cn-shenzhen.aliyuncs.com
+  callbackUrl: https://test.keda.sycexe.com/kedatest/api-file/files/callback

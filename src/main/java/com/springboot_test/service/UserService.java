@@ -17,7 +17,7 @@ public interface UserService {
     List<User> selAll();
 
 
-    void TransactionalTest() throws Exception;
+    String TransactionalTest() ;
 
 
     void redis();
