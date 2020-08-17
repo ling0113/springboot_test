@@ -38,6 +38,7 @@ public class FileController {
     //空间
     private String bucketName = "lingoss0730";
 
+    @ApiOperation(value = "下载图片")
     @GetMapping("/getStream")
     public void getProjectStream(HttpServletResponse response, @RequestParam("url") String url) {
         System.out.println(accessKeyId);

@@ -1,5 +1,5 @@
 server:
-  port: 19001
+  port: 10001
 
 spring:
   redis:
@@ -18,19 +18,28 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 100MB
-
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://ling07.top:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-    password: lgr123456
-    username: root
+    data1:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://ling07.top:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      password: lgr123456
+      username: root
+    data2:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://ling07.top:3306/user_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      password: lgr123456
+      username: root
 
 mybatis:
   mapper-locations: classpath:mybatis-mappers/*Dao.xml
   type-aliases-package: com.springboot_test.entity
 logging:
   level:
-    com.springboot_test.dao: debug
+    com.springboot_test.dao1: debug
+    com.springboot_test.dao2: debug
 oss:
   endpoint: oss-cn-beijing.aliyuncs.com
   accessKeyId: LTAIi4DV4Aso36u1
@@ -38,3 +47,15 @@ oss:
   bucketName: lingoss0730
   domain: https://sycexe-keda-test.oss-cn-shenzhen.aliyuncs.com
   callbackUrl: https://test.keda.sycexe.com/kedatest/api-file/files/callback
+
+##开启监控访问权限，可以访问所有端点
+#management:
+#  security:
+#    enabled: false
+##显示版本信息
+#info:
+#  app:
+#    name: "@project.name@"  #从pom.xml中获取,pom.xml中需build中加入插件spring-boot-maven-plugin
+#    description: "@project.description@"
+#    version: "@project.version@"
+#    spring-boot-version: "@project.version@"

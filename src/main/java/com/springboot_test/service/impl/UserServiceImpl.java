@@ -1,14 +1,12 @@
 package com.springboot_test.service.impl;
 
-import com.springboot_test.config.GlobalException;
-import com.springboot_test.dao.UserDao;
+import com.springboot_test.dao1.UserDao;
 import com.springboot_test.entity.User;
 
 import com.springboot_test.service.UserService;
 import com.springboot_test.util.SnowflakeUtil;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import lombok.extern.slf4j.Slf4j;
@@ -88,7 +86,7 @@ public class UserServiceImpl implements UserService {
      * 当查询不到信息显示系统繁忙重新发起请求.
      */
     @Override
-    public  void redis() {
+    public  void redisLock() {
         //订单id  前端所传参数
         String orderId = "54164613154631546";
         //每个线程的唯一id

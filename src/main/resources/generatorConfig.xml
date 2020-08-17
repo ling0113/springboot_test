@@ -56,7 +56,7 @@
       <property name="enableSubPackages" value="true"/>
     </sqlMapGenerator>
     <!-- 生成DAO的包名和位置-->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.springboot_test.dao"
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.springboot_test.dao2"
       targetProject="E:\ling\demo08\springboot_test\src\main\java">
       <property name="enableSubPackages" value="true"/>
     </javaClientGenerator>
@@ -64,7 +64,7 @@
 
     <!--<table tableName="tbl_yzb_payment_way" domainObjectName="PaymentWay" mapperName="PaymentWayDao"  enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
     <!--</table>-->
-    <table tableName="user" domainObjectName="user" mapperName="userDao" enableUpdateByExample="false"
+    <table tableName="note" domainObjectName="note" mapperName="noteDao" enableUpdateByExample="false"
       enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
     </table>
     <!--<table tableName="tbl_yzb_bank_item" domainObjectName="BankItem" mapperName="BankItemDao"  enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">

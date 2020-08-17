@@ -20,6 +20,6 @@ public interface UserService {
     String TransactionalTest() ;
 
 
-    void redis();
+    void redisLock();
 
 }
