@@ -55,8 +55,8 @@ public class DataSource2 {
      * @param ds
      * @return
      */
-    @Bean(name = "data2TransactionManager")
+    /*@Bean(name = "data2TransactionManager")
     public DataSourceTransactionManager transactionManager(@Qualifier("data2Source") DataSource ds){
         return new DataSourceTransactionManager(ds);
-    }
+    }*/
 }

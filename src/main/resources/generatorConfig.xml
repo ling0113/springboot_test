@@ -64,7 +64,7 @@
 
     <!--<table tableName="tbl_yzb_payment_way" domainObjectName="PaymentWay" mapperName="PaymentWayDao"  enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
     <!--</table>-->
-    <table tableName="note" domainObjectName="note" mapperName="noteDao" enableUpdateByExample="false"
+    <table tableName="aa" domainObjectName="aa" mapperName="aaDao" enableUpdateByExample="false"
       enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
     </table>
     <!--<table tableName="tbl_yzb_bank_item" domainObjectName="BankItem" mapperName="BankItemDao"  enableUpdateByExample="false" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">

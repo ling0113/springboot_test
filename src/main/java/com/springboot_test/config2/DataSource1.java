@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -59,9 +60,9 @@ public class DataSource1 {
      * @param ds
      * @return
      */
-    @Bean(name = "data1TransactionManager")
+    /*@Bean(name = "data1TransactionManager")
     @Primary
     public DataSourceTransactionManager transactionManager(@Qualifier("data1Source") DataSource ds){
         return new DataSourceTransactionManager(ds);
-    }
+    }*/
 }

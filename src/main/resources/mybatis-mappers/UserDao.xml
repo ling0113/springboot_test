@@ -11,4 +11,20 @@
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
+
+  <resultMap id="aaMap" type="com.springboot_test.vo.UserAaVo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+    <association property="id" javaType="java.lang.String">
+
+    </association>
+  </resultMap>
+
+  <select id="selList" resultMap="aaMap">
+    select * from user
+  </select>
 </mapper>

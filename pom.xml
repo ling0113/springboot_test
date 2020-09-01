@@ -40,7 +40,11 @@
       <artifactId>spring-boot-admin-server-ui</artifactId>
       <version>1.5.4</version>
     </dependency>
-
+    <!--分布式事务-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+    </dependency>
     <dependency>
       <groupId>tk.mybatis</groupId>
       <artifactId>mapper-spring-boot-starter</artifactId>

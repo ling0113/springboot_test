@@ -2,6 +2,7 @@ package com.springboot_test.service;
 
 
 import com.springboot_test.entity.User;
+import com.springboot_test.vo.UserAaVo;
 import java.util.List;
 
 /**
@@ -21,5 +22,7 @@ public interface UserService {
 
 
     void redisLock();
+
+    List<UserAaVo> selList();
 
 }

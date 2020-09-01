@@ -5,6 +5,7 @@ import com.springboot_test.entity.User;
 
 import com.springboot_test.service.UserService;
 import com.springboot_test.util.SnowflakeUtil;
+import com.springboot_test.vo.UserAaVo;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -125,5 +126,15 @@ public class UserServiceImpl implements UserService {
             }
         }
 
+    }
+
+    /**
+     * 测试mybatis  一对多 在同一个对象
+     * @return
+     */
+    @Override
+    public List<UserAaVo> selList() {
+        List<UserAaVo> list = userDao.selList();
+        return list;
     }
 }

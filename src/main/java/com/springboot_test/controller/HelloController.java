@@ -6,6 +6,7 @@ import com.springboot_test.entity.Note;
 import com.springboot_test.entity.User;
 import com.springboot_test.service.NoteService;
 import com.springboot_test.service.UserService;
+import com.springboot_test.vo.UserAaVo;
 import com.sun.org.apache.regexp.internal.RE;
 import io.swagger.annotations.ApiOperation;
 import java.util.Date;
@@ -38,10 +39,11 @@ public class HelloController {
      */
     @ApiOperation(value = "测试mybatis")
     @GetMapping("/aa")
-    public List<User> aaa(@RequestParam("id") String id) {
+    public List<UserAaVo> aaa(@RequestParam("id") String id) {
         System.out.println(id);
         List<User> list = userService.selAll();
-        return list;
+        List<UserAaVo> list2 = userService.selList();
+        return list2;
     }
 
     /**
