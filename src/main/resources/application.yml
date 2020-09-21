@@ -25,12 +25,12 @@ spring:
     data1:
       driver-class-name: com.mysql.jdbc.Driver
       jdbc-url: jdbc:mysql://ling07.top:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-      password: lgr123456
+      password: Cc@123456
       username: root
     data2:
       driver-class-name: com.mysql.jdbc.Driver
       jdbc-url: jdbc:mysql://ling07.top:3306/user_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
-      password: lgr123456
+      password: Cc@123456
       username: root
 
 mybatis:
@@ -42,8 +42,8 @@ logging:
     com.springboot_test.dao2: debug
 oss:
   endpoint: oss-cn-beijing.aliyuncs.com
-  accessKeyId: LTAIi4DV4Aso36u1
-  accessKeySecret: JEdNVS4MnEi0ayllmnWxqP9Dw7tx7F
+  accessKeyId: ZZZZLTAIi4DV4Aso36u1AAAAA
+  accessKeySecret: ZZZZJEdNVS4MnEi0ayllmnWxqP9Dw7tx7FAAAAA
   bucketName: lingoss0730
   domain: https://sycexe-keda-test.oss-cn-shenzhen.aliyuncs.com
   callbackUrl: https://test.keda.sycexe.com/kedatest/api-file/files/callback

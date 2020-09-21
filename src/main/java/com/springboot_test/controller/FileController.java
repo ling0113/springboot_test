@@ -5,18 +5,19 @@ import com.aliyun.oss.model.OSSObject;
 import com.springboot_test.service.TestService;
 import com.springboot_test.util.ResponseResult;
 import io.swagger.annotations.ApiOperation;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URLEncoder;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URLEncoder;
 
 /**
  * @ClassName: com.springboot_test.controller.TestController
@@ -33,8 +34,8 @@ public class FileController {
     // endpoint以杭州为例，其它region请按实际情况填写
     private String endpoint = "oss-cn-beijing.aliyuncs.com";
     // accessKey
-    private String accessKeyId = "LTAIi4DV4Aso36u1";
-    private String accessKeySecret = "JEdNVS4MnEi0ayllmnWxqP9Dw7tx7F";
+    private String accessKeyId = "ZZZZLTAIi4DV4Aso36u1AAAAAA";
+    private String accessKeySecret = "ZZZZJEdNVS4MnEi0ayllmnWxqP9Dw7tx7FAAAA";
     //空间
     private String bucketName = "lingoss0730";
 

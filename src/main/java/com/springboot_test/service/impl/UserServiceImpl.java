@@ -2,19 +2,19 @@ package com.springboot_test.service.impl;
 
 import com.springboot_test.dao1.UserDao;
 import com.springboot_test.entity.User;
-
 import com.springboot_test.service.UserService;
 import com.springboot_test.util.SnowflakeUtil;
 import com.springboot_test.vo.UserAaVo;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName: com.springboot_test.service.impl.UserServiceImpl
@@ -100,10 +100,10 @@ public class UserServiceImpl implements UserService {
             redisTemplate.expire(orderId,10, TimeUnit.SECONDS);
 
             //上面两条命令一起使用
-            Boolean aBoolean = redisTemplate.opsForValue().setIfAbsent(orderId, s, 10, TimeUnit.SECONDS);
-            if (!aBoolean){
-                System.out.println("系统繁忙");
-            }
+            //Boolean aBoolean = redisTemplate.opsForValue().setIfAbsent(orderId, s, 10, TimeUnit.SECONDS);
+            //if (!aBoolean){
+            //    System.out.println("系统繁忙");
+            //}
 
             /*
             //总库存
