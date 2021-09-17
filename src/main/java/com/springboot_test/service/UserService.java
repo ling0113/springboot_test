@@ -25,4 +25,5 @@ public interface UserService {
 
     List<UserAaVo> selList();
 
+    String sk(String id);
 }

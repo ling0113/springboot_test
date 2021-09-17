@@ -9,4 +9,5 @@ public interface UserDao extends Mapper<User> {
 
     List<UserAaVo> selList();
 
+    String sk(String id);
 }

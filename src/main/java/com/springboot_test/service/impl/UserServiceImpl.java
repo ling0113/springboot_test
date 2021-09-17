@@ -137,4 +137,11 @@ public class UserServiceImpl implements UserService {
         List<UserAaVo> list = userDao.selList();
         return list;
     }
+
+    @Override
+    public String sk(String id) {
+        String phone = userDao.sk(id);
+
+        return phone;
+    }
 }

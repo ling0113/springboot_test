@@ -8,6 +8,7 @@ import com.springboot_test.service.NoteService;
 import com.springboot_test.service.UserService;
 import com.springboot_test.vo.UserAaVo;
 import com.sun.org.apache.regexp.internal.RE;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.Date;
 import java.util.List;
@@ -20,6 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/hello")
+@Api(tags = "hello模块")
 public class HelloController {
 
     @Autowired
@@ -39,11 +42,20 @@ public class HelloController {
      */
     @ApiOperation(value = "测试mybatis")
     @GetMapping("/aa")
-    public List<UserAaVo> aaa(@RequestParam("id") String id) {
+    public List<User> aaa(@RequestParam("id") String id) {
         System.out.println(id);
-        List<User> list = userService.selAll();
-        List<UserAaVo> list2 = userService.selList();
+        //List<User> list = userService.selAll();
+        List<User> list2 = userService.selAll();
         return list2;
+    }
+
+    @ApiOperation(value = "测试mybatis2")
+    @GetMapping("/aa2")
+    public String aaa2(@RequestParam("id") String id) {
+        System.out.println(id);
+        //List<User> list = userService.selAll();
+        String a = userService.sk(id);
+        return a;
     }
 
     /**

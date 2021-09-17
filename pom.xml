@@ -31,6 +31,11 @@
       <version>1.1.1</version>
     </dependency>
     <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>1.1.23</version>
+    </dependency>
+    <dependency>
       <groupId>de.codecentric</groupId>
       <artifactId>spring-boot-admin-server</artifactId>
       <version>1.5.4</version>
@@ -127,6 +132,29 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.23</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-test</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.7.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+
+
   </dependencies>
 
   <build>
@@ -145,7 +173,7 @@
         </configuration>
       </plugin>
 
-      <plugin>
+      <!--<plugin>
         <groupId>com.spotify</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <version>1.0.0</version>
@@ -158,28 +186,28 @@
           </dependency>
         </dependencies>
         <configuration>
-          <!-- docker远程地址 开通远程访问-->
+          &lt;!&ndash; docker远程地址 开通远程访问&ndash;&gt;
           <dockerHost>http://115.28.138.45:2375</dockerHost>
-          <!--镜像名称以及版本号-->
+          &lt;!&ndash;镜像名称以及版本号&ndash;&gt;
           <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
           <imageTags>
-          <!--默认标签-->
+          &lt;!&ndash;默认标签&ndash;&gt;
             <imageTag>latest</imageTag>
           </imageTags>
-          <!--依赖的基础镜像-->
+          &lt;!&ndash;依赖的基础镜像&ndash;&gt;
           <baseImage>java</baseImage>
-          <!-- Dockerfile的位置  服务太多暂时不用-->
-          <!--<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
+          &lt;!&ndash; Dockerfile的位置  服务太多暂时不用&ndash;&gt;
+          &lt;!&ndash;<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>&ndash;&gt;
 
-          <!-- 这里是复制 jar 包到 docker 容器指定目录配置-->
+          &lt;!&ndash; 这里是复制 jar 包到 docker 容器指定目录配置&ndash;&gt;
           <workdir>/tmp</workdir>
           <entryPoint>["java", "-jar", "${project.build.finalName}.jar"]</entryPoint>
           <resources>
             <resource>
               <targetPath>/tmp</targetPath>
-          <!--用于指定需要复制的根目录 ${project.build.directory}表示为target目录 -->
+          &lt;!&ndash;用于指定需要复制的根目录 ${project.build.directory}表示为target目录 &ndash;&gt;
               <directory>${project.build.directory}</directory>
-          <!--用于指定需要复制的文件 ${project.build.directory}.jar表示为打包后jar文件 -->
+          &lt;!&ndash;用于指定需要复制的文件 ${project.build.directory}.jar表示为打包后jar文件 &ndash;&gt;
               <include>${project.build.finalName}.jar</include>
             </resource>
           </resources>
@@ -193,7 +221,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
       <!-- Docker maven plugin -->
 
 

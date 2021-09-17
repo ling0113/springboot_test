@@ -27,4 +27,8 @@
   <select id="selList" resultMap="aaMap">
     select * from user
   </select>
+
+  <select id="sk" resultType="java.lang.String">
+    select user_phone from user where id =#{id,jdbcType=VARCHAR}
+  </select>
 </mapper>

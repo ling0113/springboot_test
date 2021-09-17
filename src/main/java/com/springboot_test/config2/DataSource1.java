@@ -9,11 +9,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import tk.mybatis.spring.annotation.MapperScan;
 
 import javax.sql.DataSource;
 
-@Configuration//注解到spring容器中
+//@Configuration//注解到spring容器中
 @MapperScan(basePackages = "com.springboot_test.dao1",sqlSessionFactoryRef = "data1SqlSessionFactory")
 public class DataSource1 {
 
@@ -39,6 +41,8 @@ public class DataSource1 {
     public SqlSessionFactory sqlSessionFactory(@Qualifier("data1Source") DataSource ds) throws Exception{
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(ds);
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mappers/dao1/*Dao.xml"));
+
         return bean.getObject();
     }
 
@@ -59,9 +63,9 @@ public class DataSource1 {
      * @param ds
      * @return
      */
-    /*@Bean(name = "data1TransactionManager")
+    @Bean(name = "data1TransactionManager")
     @Primary
     public DataSourceTransactionManager transactionManager(@Qualifier("data1Source") DataSource ds){
         return new DataSourceTransactionManager(ds);
-    }*/
+    }
 }
