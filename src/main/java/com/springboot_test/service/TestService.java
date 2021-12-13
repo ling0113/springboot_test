@@ -1,6 +1,7 @@
 package com.springboot_test.service;
 
 import com.springboot_test.util.ResponseResult;
+import java.io.IOException;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -14,5 +15,7 @@ public interface TestService {
 
 
     ResponseResult uploadOss(MultipartFile file, String fileSource);
+
+    void redisson() throws IOException;
 
 }

@@ -5,6 +5,10 @@ import com.springboot_test.util.ResponseResult;
 import com.springboot_test.utils.OssClientUtil;
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.Redisson;
+import org.redisson.api.RBucket;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,6 +43,35 @@ public class TestServiceImpl implements TestService {
         return ResponseResult.success(imgUrl);
     }
 
+    @Override
+    public void redisson() throws IOException {
+        Config config = new Config();
+        config.useClusterServers()
+                // use "rediss://" for SSL connection
+                .addNodeAddress("perredis://115.28.138.45:6379");
+        RedissonClient redisson = Redisson.create(config);
+        System.out.println(redisson.getConfig().toJSON().toString());
+    }
+
+    public static void main(String[] args) throws IOException {
+        Config config = new Config();
+        /*config.useClusterServers()
+                // use "rediss://" for SSL connection
+                .addNodeAddress("perredis://115.28.138.45:6379");
+        RedissonClient redisson = Redisson.create(config);
+        try {
+            System.out.println(redisson.getConfig().toJSON().toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+        config.useSingleServer().setAddress("redis://115.28.138.45:6379").setPassword("redispassword");
+        RedissonClient redissonClient = Redisson.create(config);
+        System.out.println(redissonClient.getConfig().toJSON().toString());
+        RBucket<String> lcc = redissonClient.getBucket("lcc");
+        System.out.println(lcc.get());
+
+    }
 
 
 }

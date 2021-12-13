@@ -9,4 +9,7 @@ package com.springboot_test.service;
  */
 public interface NoteService {
 
+    void a();
+
+
 }

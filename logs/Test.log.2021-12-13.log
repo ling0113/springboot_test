@@ -1,0 +1,7 @@
+2021-12-13 14:10:54.123 [main] INFO  com.springboot_test.SpringbootTestApplication - Starting SpringbootTestApplication on TK-CNB-0210 with PID 12368 (D:\project\springboot_test\target\classes started by admin in D:\project\springboot_test)
+2021-12-13 14:10:54.133 [main] INFO  com.springboot_test.SpringbootTestApplication - No active profile set, falling back to default profiles: default
+2021-12-13 14:11:06.964 [main] INFO  com.springboot_test.SpringbootTestApplication - Started SpringbootTestApplication in 13.893 seconds (JVM running for 19.526)
+2021-12-13 14:11:23.001 [http-nio-12584-exec-1] INFO  com.springboot_test.controller.HelloController - 测试日志
+2021-12-13 14:11:23.681 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.selectAll - ==>  Preparing: SELECT `id`,`user_name`,`user_phone`,`user_password`,`create_time` FROM `user` 
+2021-12-13 14:11:23.859 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.selectAll - ==> Parameters: 
+2021-12-13 14:11:23.887 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.selectAll - <==      Total: 2

@@ -29,6 +29,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                         .version("1.0")
                         .build());
     }
+    //http://localhost:端口号/swagger-ui.html
 
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {

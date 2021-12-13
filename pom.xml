@@ -35,7 +35,7 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.23</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>de.codecentric</groupId>
       <artifactId>spring-boot-admin-server</artifactId>
       <version>1.5.4</version>
@@ -44,12 +44,14 @@
       <groupId>de.codecentric</groupId>
       <artifactId>spring-boot-admin-server-ui</artifactId>
       <version>1.5.4</version>
-    </dependency>
+    </dependency>-->
     <!--分布式事务-->
+<!--
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-jta-atomikos</artifactId>
     </dependency>
+-->
     <dependency>
       <groupId>tk.mybatis</groupId>
       <artifactId>mapper-spring-boot-starter</artifactId>
@@ -66,6 +68,13 @@
         </exclusion>
       </exclusions>
     </dependency>
+<!--    redisson 框架 分布式锁-->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+      <version>3.5.0</version>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -80,6 +89,11 @@
       <groupId>cn.hutool</groupId>
       <artifactId>hutool-all</artifactId>
       <version>4.1.20</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
     </dependency>
     <dependency>
       <groupId>io.springfox</groupId>
@@ -153,7 +167,17 @@
       <scope>compile</scope>
     </dependency>
 
-
+    <!--   spring 重试-->
+    <dependency>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
+      <version>1.2.4.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.2</version>
+    </dependency>
 
   </dependencies>
 

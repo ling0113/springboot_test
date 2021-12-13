@@ -12,14 +12,18 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.Date;
 import java.util.List;
+import javax.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+@Slf4j
 @RestController
 @RequestMapping("/hello")
 @Api(tags = "hello模块")
@@ -34,7 +38,7 @@ public class HelloController {
     @Autowired
     private NoteDao noteDao;
 
-    @Autowired
+
     private UserDao userDao;
 
     /**
@@ -43,6 +47,8 @@ public class HelloController {
     @ApiOperation(value = "测试mybatis")
     @GetMapping("/aa")
     public List<User> aaa(@RequestParam("id") String id) {
+        log.info("测试日志");
+
         System.out.println(id);
         //List<User> list = userService.selAll();
         List<User> list2 = userService.selAll();
