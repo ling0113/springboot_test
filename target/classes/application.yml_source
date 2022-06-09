@@ -1,0 +1,72 @@
+server:
+  port: 12584
+
+spring:
+  redis:
+    host: 115.28.138.45
+    password: redispassword
+    port: 6379
+    database: 0
+
+    jedis:
+      pool:
+        max-active: 10
+        max-wait: 6000ms
+        max-idle: 8
+        min-idle: 5
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    data1:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=Hongkong&characterEncoding=utf-8&autoReconnect=true
+      password: 12345678
+      username: root
+    data2:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.01:3306/user_db?useSSL=false&serverTimezone=Hongkong&characterEncoding=utf-8&autoReconnect=true
+      password: 12345678
+      username: root
+#spring:
+#  datasource:
+#    data1:
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://115.28.138.45:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+#      password: Cc@123456
+#      username: root
+#    data2:
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://115.28.138.45:3306/user_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+#      password: Cc@123456
+#      username: root
+mybatis:
+  mapper-locations: classpath:mappers/dao1/*Dao.xml,mappers/dao2/*Dao.xml
+  type-aliases-package: com.springboot_test.entity
+logging:
+  level:
+    com.springboot_test.dao1: debug
+    com.springboot_test.dao2: debug
+oss:
+  endpoint: oss-cn-beijing.aliyuncs.com
+  accessKeyId: ZZZZLTAIi4DV4Aso36u1AAAAA
+  accessKeySecret: ZZZZJEdNVS4MnEi0ayllmnWxqP9Dw7tx7FAAAAA
+  bucketName: lingoss0730
+  domain: https://sycexe-keda-test.oss-cn-shenzhen.aliyuncs.com
+  callbackUrl: https://test.keda.sycexe.com/kedatest/api-file/files/callback
+
+##开启监控访问权限，可以访问所有端点
+#management:
+#  security:
+#    enabled: false
+##显示版本信息
+#info:
+#  app:
+#    name: "@project.name@"  #从pom.xml中获取,pom.xml中需build中加入插件spring-boot-maven-plugin
+#    description: "@project.description@"
+#    version: "@project.version@"
+#    spring-boot-version: "@project.version@"

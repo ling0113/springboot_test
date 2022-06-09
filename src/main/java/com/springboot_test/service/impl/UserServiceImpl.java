@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Service
 @Slf4j
-@Transactional
+//@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
         //throw new GlobalException("100", "事务回滚");
 
     }
-    @Transactional
+    //@Transactional
     public void a() {
 
         User user = new User();

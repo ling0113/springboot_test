@@ -1,0 +1,29 @@
+2022-04-20 15:34:47.484 [main] INFO  com.springboot_test.SpringbootTestApplication - Starting SpringbootTestApplication on TK-CNB-0210 with PID 1868 (D:\project\springboot_test\target\classes started by admin in D:\project\springboot_test)
+2022-04-20 15:34:47.490 [main] INFO  com.springboot_test.SpringbootTestApplication - No active profile set, falling back to default profiles: default
+2022-04-20 15:35:00.243 [main] INFO  com.springboot_test.SpringbootTestApplication - Started SpringbootTestApplication in 13.707 seconds (JVM running for 20.204)
+2022-04-20 15:37:34.097 [http-nio-12584-exec-4] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:37:34.278 [http-nio-12584-exec-4] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516682469687037952(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:37:34.028(Timestamp)
+2022-04-20 15:38:50.038 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:38:50.041 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516682788491890688(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:38:50.037(Timestamp)
+2022-04-20 15:38:50.118 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
+2022-04-20 15:38:50.119 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:38:50.119 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516682788831629312(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:38:50.118(Timestamp)
+2022-04-20 15:38:50.121 [http-nio-12584-exec-7] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
+2022-04-20 15:39:34.781 [main] INFO  com.springboot_test.SpringbootTestApplication - Starting SpringbootTestApplication on TK-CNB-0210 with PID 16980 (D:\project\springboot_test\target\classes started by admin in D:\project\springboot_test)
+2022-04-20 15:39:34.787 [main] INFO  com.springboot_test.SpringbootTestApplication - No active profile set, falling back to default profiles: default
+2022-04-20 15:39:45.962 [main] INFO  com.springboot_test.SpringbootTestApplication - Started SpringbootTestApplication in 12.179 seconds (JVM running for 16.171)
+2022-04-20 15:40:34.459 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:40:34.604 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516683226243010560(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:40:34.405(Timestamp)
+2022-04-20 15:40:34.612 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
+2022-04-20 15:40:34.613 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:40:34.614 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516683227115425792(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:40:34.613(Timestamp)
+2022-04-20 15:40:34.616 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
+2022-04-20 15:41:08.234 [main] INFO  com.springboot_test.SpringbootTestApplication - Starting SpringbootTestApplication on TK-CNB-0210 with PID 12304 (D:\project\springboot_test\target\classes started by admin in D:\project\springboot_test)
+2022-04-20 15:41:08.240 [main] INFO  com.springboot_test.SpringbootTestApplication - No active profile set, falling back to default profiles: default
+2022-04-20 15:41:20.095 [main] INFO  com.springboot_test.SpringbootTestApplication - Started SpringbootTestApplication in 12.773 seconds (JVM running for 16.573)
+2022-04-20 15:41:30.843 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:41:30.986 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516683460528443392(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:41:30.263(Timestamp)
+2022-04-20 15:41:31.064 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
+2022-04-20 15:41:31.066 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==>  Preparing: INSERT INTO `user` ( `id`,`user_name`,`user_phone`,`user_password`,`create_time` ) VALUES( ?,?,?,?,? ) 
+2022-04-20 15:41:31.067 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - ==> Parameters: 1516683463892275200(String), 事务9999(String), 8888(String), 99999(String), 2022-04-20 15:41:31.065(Timestamp)
+2022-04-20 15:41:31.096 [http-nio-12584-exec-1] DEBUG com.springboot_test.dao1.UserDao.insertSelective - <==    Updates: 1
